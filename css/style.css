@@ -1,0 +1,372 @@
+/* ==========================================================================
+   Academic Personal Website
+   Fonts: Playfair Display (headings) + Lora (body)
+   Colors: Warm ivory (#FAFAF7), Slate (#3B4856), Muted navy (#2E3D50)
+   Layout: Fixed left sidebar + scrollable main content
+   ========================================================================== */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #FDFDFC;
+}
+
+a {
+  color: #4A6274;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #2E3D50;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Page Layout: Sidebar + Main --- */
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar (Fixed Left) --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #2E3D50;
+  color: #E8E9EB;
+  padding: 48px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.sidebar .name-kanji {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+}
+
+.sidebar .affiliation-brief {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+/* Social icons in sidebar */
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 20px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Sidebar contact */
+.sidebar-contact {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 16px;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.sidebar-contact-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.sidebar-contact a {
+  color: rgba(255, 255, 255, 0.7);
+  word-break: break-all;
+}
+
+.sidebar-contact a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* --- Main Content (Scrollable) --- */
+.main-content {
+  margin-left: 300px;
+  flex: 1;
+  padding: 48px 56px 48px 56px;
+  max-width: 1000px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+section + section {
+  padding-top: 40px;
+  border-top: 1px solid #E4E2DD;
+}
+
+/* --- Section Headings --- */
+section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2E3D50;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #2E3D50;
+}
+
+section h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3D3D3D;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* --- Affiliations / Experience / Education --- */
+.entry-list {
+  list-style: none;
+}
+
+.entry-list li {
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 3px solid #D5D3CD;
+}
+
+.entry-list .entry-title {
+  font-weight: 600;
+}
+
+.entry-list .entry-org {
+  color: #4A6274;
+  font-weight: 600;
+}
+
+.entry-list .entry-period {
+  font-size: 0.88rem;
+  color: #999;
+}
+
+/* Grouped entries (multiple roles at same company) */
+.entry-group {
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 3px solid #D5D3CD;
+}
+
+.entry-group .entry-org {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.entry-group .entry-role {
+  margin-bottom: 8px;
+  padding-left: 12px;
+}
+
+.entry-group .entry-role:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Education table --- */
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.edu-table tr + tr td {
+  padding-top: 16px;
+}
+
+.edu-table td {
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.edu-table .edu-period {
+  white-space: nowrap;
+  width: 120px;
+  padding-right: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* --- Publications (numbered list) --- */
+.pub-numbered {
+  padding-left: 28px;
+}
+
+.pub-numbered li {
+  margin-bottom: 16px;
+  line-height: 1.65;
+}
+
+.pub-numbered li::marker {
+  font-weight: 600;
+  color: #999;
+}
+
+.pub-numbered a {
+  font-weight: 600;
+  color: #2563EB;
+}
+
+.pub-numbered a:hover {
+  color: #1D4ED8;
+}
+
+/* --- Contact --- */
+.contact-info {
+  line-height: 2;
+}
+
+.contact-info dt {
+  font-weight: 600;
+  color: #4A6274;
+  display: inline;
+}
+
+.contact-info dd {
+  display: inline;
+  margin-left: 4px;
+}
+
+.contact-info dd::after {
+  content: '';
+  display: block;
+}
+
+/* --- Mobile hamburger button --- */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  background-color: #2E3D50;
+  color: #FAFAF7;
+  border: none;
+  border-radius: 6px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 150;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 64px 20px 40px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
+  }
+}
