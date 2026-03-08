@@ -76,6 +76,14 @@ img {
   margin-bottom: 20px;
 }
 
+.sidebar-name-link {
+  text-decoration: none;
+}
+
+.sidebar-name-link:hover {
+  text-decoration: none;
+}
+
 .sidebar h1 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.5rem;
