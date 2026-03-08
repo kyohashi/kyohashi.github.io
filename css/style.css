@@ -116,6 +116,33 @@ img {
   text-decoration: none;
 }
 
+/* Sidebar interests */
+.sidebar-interests {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-interests-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.sidebar-interests-list {
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+}
+
+.sidebar-interests-list li {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
 /* Sidebar navigation */
 .sidebar-nav {
   width: 100%;
@@ -171,6 +198,12 @@ img {
 .sidebar-contact a:hover {
   color: #FFFFFF;
   text-decoration: underline;
+}
+
+.sidebar-copyright {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 12px;
 }
 
 /* --- Main Content (Scrollable) --- */
