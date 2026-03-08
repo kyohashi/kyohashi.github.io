@@ -94,7 +94,7 @@ img {
 }
 
 .sidebar .name-kanji {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 12px;
 }
@@ -115,7 +115,7 @@ img {
 
 .social-links a {
   color: rgba(255, 255, 255, 0.55);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.2s;
 }
 
@@ -133,7 +133,7 @@ img {
 
 .sidebar-interests-label {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 8px;
@@ -147,7 +147,7 @@ img {
 
 .sidebar-interests-list li {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   line-height: 1.8;
 }
 
@@ -363,6 +363,15 @@ section h3 {
 .contact-info dd::after {
   content: '';
   display: block;
+}
+
+.contact-info a {
+  color: #2563EB;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: #1D4ED8;
 }
 
 /* --- Mobile hamburger button --- */
