@@ -324,6 +324,30 @@
     document.querySelector('.sidebar').classList.toggle('open');
   });
 
+  // Calculate and display tenure duration for work experience entries
+  (function () {
+    var months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+    document.querySelectorAll('#experience .entry-period').forEach(function (el) {
+      var text = el.textContent.trim();
+      var m = text.match(/^(\w{3})\s+(\d{4})\s*[–\-]\s*(\w+)\s*(\d{4})?$/);
+      if (!m) return;
+      var sy = parseInt(m[2]), sm = months[m[1]], ey, em;
+      if (m[3] === 'Present') {
+        var now = new Date(); ey = now.getFullYear(); em = now.getMonth();
+      } else {
+        ey = parseInt(m[4]); em = months[m[3]];
+      }
+      var total = (ey - sy) * 12 + (em - sm) + 1;
+      if (total < 1) total = 1;
+      var y = Math.floor(total / 12), mo = total % 12;
+      var dur = '';
+      if (y > 0) dur += y + ' yr' + (y > 1 ? 's' : '');
+      if (y > 0 && mo > 0) dur += ' ';
+      if (mo > 0) dur += mo + ' mo' + (mo > 1 ? 's' : '');
+      if (!dur) dur = '< 1 mo';
+      el.textContent = text + ' (' + dur + ')';
+    });
+  })();
 </script>
 
 </body>
